@@ -28,9 +28,14 @@ export default function Item(props) {
 
           <p className="mb-3 font-normal flex justify-between">
             <span className='text-gray-400'>{props.rarity.name}</span>
-            <span className='text-xl font-bold text-green-500'>{props.price.regularPrice} $</span>
+            <span className='text-xl font-bold text-green-500'>${props.price.regularPrice}</span>
           </p>
-          <Button onClick={() => addItem({id: props.mainId, name: props.displayName})}>Buy</Button>
+          <Button onClick={() => addItem({
+            id: props.mainId,
+            name: props.displayName,
+            price: props.price.regularPrice,
+            image: props.displayAssets[0].full_background,
+          })}>Buy</Button>
         </div>
       </div>)
 }

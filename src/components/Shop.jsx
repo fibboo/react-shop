@@ -1,11 +1,15 @@
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import {API_KEY, API_URL} from "../configs.js";
 import Preloader from "../elememts/Preloader.jsx";
 import Items from "./Items.jsx";
+import Cart from "./Cart.jsx";
+import CartContext from "../contexts/CartContext.js";
+import Toast from "../elememts/Toast.jsx";
 
 export default function Shop() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
+  const {cartOpen, toastItemName} = useContext(CartContext)
 
   useEffect(function getItems() {
     setLoading(true);
@@ -22,7 +26,9 @@ export default function Shop() {
 
   return (
       <main className='flex flex-col justify-center-safe items-center flex-1 p-10'>
-        {loading ? <Preloader/> : <Items items={items}/>}
+        {toastItemName && <Toast />}
+        {cartOpen && <Cart />}
+        {loading ? <Preloader /> : <Items items={items} />}
       </main>
 
   );

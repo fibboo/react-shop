@@ -1,14 +1,17 @@
 import Header from "./layouts/Header.jsx";
-import {Main} from "./layouts/Main.jsx";
+import Shop from "./components/Shop.jsx";
 import Footer from "./layouts/Footer.jsx";
+import CartContextProvider from "./components/CartContextProvider.jsx";
 
 
 export default function App() {
   return (
-      <div className="flex flex-col min-h-screen p-5">
-        <Header/>
-        <Main/>
-        <Footer/>
-      </div>
+      <CartContextProvider>
+        <div className="flex flex-col min-h-screen">
+          <Header/>
+          <Shop/>
+          <Footer/>
+        </div>
+      </CartContextProvider>
   );
 }

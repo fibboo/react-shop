@@ -4,7 +4,7 @@ export default function Button({onClick, children}) {
           className="
             bg-emerald-200 hover:bg-emerald-300 text-zinc-900
             font-bold
-            px-6 py-3 mt-4
+            px-6 py-3 mt-4 w-full
             rounded-2xl
             shadow-lg
             transition-transform

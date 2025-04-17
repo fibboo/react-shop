@@ -1,6 +1,6 @@
 import Button from "../elememts/Button.jsx";
 import {useContext} from "react";
-import CartContext from "../contexts/CartContext.js";
+import CartContext from "../helpers/CartContext.js";
 
 export default function Item(props) {
   const {addItem} = useContext(CartContext)

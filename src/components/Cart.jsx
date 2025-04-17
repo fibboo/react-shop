@@ -1,9 +1,9 @@
 import {useContext} from "react";
-import CartContext from "../contexts/CartContext.js";
+import CartContext from "../helpers/CartContext.js";
 import CartItem from "./CartItem.jsx";
 
 export default function Cart() {
-  const {items, openCloseCart, emptyCart, sum} = useContext(CartContext)
+  const {items, sum, openCloseCart, emptyCart} = useContext(CartContext)
 
   return (
       <div className="fixed top-20 left-1/2 -translate-x-1/2 right-auto

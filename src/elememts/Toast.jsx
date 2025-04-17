@@ -1,5 +1,5 @@
 import {useContext, useEffect} from "react";
-import CartContext from "../contexts/CartContext.js";
+import CartContext from "../helpers/CartContext.js";
 
 export default function Toast() {
   const {toastItemName, closeToast} = useContext(CartContext)

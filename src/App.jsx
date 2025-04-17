@@ -1,7 +1,7 @@
 import Header from "./layouts/Header.jsx";
 import Shop from "./components/Shop.jsx";
 import Footer from "./layouts/Footer.jsx";
-import CartContextProvider from "./components/CartContextProvider.jsx";
+import CartContextProvider from "./helpers/CartContextProvider.jsx";
 
 
 export default function App() {

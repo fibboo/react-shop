@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import CartContext from "../contexts/CartContext.js";
+import CartContext from "../helpers/CartContext.js";
 
 export default function CartIcon() {
   const {items, openCloseCart} = useContext(CartContext)
